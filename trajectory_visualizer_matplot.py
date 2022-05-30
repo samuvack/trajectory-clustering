@@ -12,7 +12,7 @@ class TrajectoryVisualizerMatplot:
                      'seagreen', 'blueviolet', 'forestgreen', 'yellow', 'lightgreen']
     markers = ['H', 's', 'd', 'p', '*', 'X', 'P', 'D', 'h', '8', 'v', '^', '<', '>', 'o']
 
-    def __init__(self, map_loc='/content/gps-trajectories-clustering/map/', dpi=150, subplots=(2, 3)):
+    def __init__(self, map_loc='/content/trajectory-clustering/map/', dpi=150, subplots=(2, 3)):
         roads = gpd.GeoDataFrame.from_file(map_loc + 'ann_map.shp')
         rows, cols = subplots
         self.fig, self.axes = plt.subplots(rows, cols, dpi=dpi, figsize=(6.4, 3.6))
